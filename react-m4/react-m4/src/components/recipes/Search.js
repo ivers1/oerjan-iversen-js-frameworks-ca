@@ -1,0 +1,17 @@
+import React from "react";
+import PropTypes from "prop-types";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
+
+// this component is discussed in this lesson https://interactive-content.now.sh/js-frameworks/4/4
+export default function SearchRecipe({ handleSearch }) {
+    return (
+        <InputGroup className="search">
+            <FormControl placeholder="Search by recipe name" onChange={event => handleSearch(event)} />
+        </InputGroup>
+    );
+}
+
+SearchRecipe.propTypes = {
+    handleSearch: PropTypes.func.isRequired
+};
