@@ -4,13 +4,26 @@ import * as yup from "yup";
 
 
 const schema = yup.object().shape({
-    firstName: yup.string().required("First name is required"),
-    lastName: yup.string().required("Last name is required"),
+    firstName: yup
+    .string()
+    .label('firstName')
+    .min(2, `Not long enough!`)
+    .required("First name is required"),
+    lastName: yup
+    .string()
+    .label('lastName')
+    .min(2, `Not long enough!`)
+    .required("Last name is required"),
     email: yup
         .string()
-        .email("Please enter a valid email")
+        .label('Email')
+        .email("Invalid Email")
         .required("Email is required"),
-    message: yup.string().required("Some information is needed")
+    message: yup
+    .string()
+    .label('Message')
+    .min(10, `Require some information!`)
+    .required(), 
 });
 
 function Form() {
