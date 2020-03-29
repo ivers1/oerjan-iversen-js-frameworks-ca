@@ -1,8 +1,14 @@
+.container {
+    background-image: url(components/images/retro-4237850_1920.jpg);
+    height: 100%;
+    background-position: center;
+}
+
 .card {
     display: block;
     width: 400px;
-    margin: 40px;
-    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -13,12 +19,14 @@
 h1 {
     font-size: 29px;
     text-align: center;
+    color: aliceblue;
 }
 
 p {
     font-size: 19px;
     font-style: italic;
     text-align: center;
+    color: aliceblue;
 }
 
 .error {
@@ -39,9 +47,11 @@ input {
 .nav-link{
     padding: 5px;
     text-decoration: none;
-    color: black;
+    color: aliceblue;
     :hover {
         cursor: pointer;
     }
     
 }
+
+
