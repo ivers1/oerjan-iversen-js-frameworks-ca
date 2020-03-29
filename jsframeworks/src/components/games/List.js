@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../constants/api";
-import GameDetail from "./GameDetail";
+import GameItem from "./GameItem";
 import Search from "./Search";
 
 function List() {
@@ -45,7 +45,7 @@ function List() {
         }
 
         return filteredResults.map(function(result) {
-            const href = "game/" + result.id;
+            const href = "games/" + result.id;
 
             return (
                 <div className="card">
@@ -53,7 +53,7 @@ function List() {
                     <img src={result.background_image} alt={result.name} />
                     <p key={result.rating}>Rating: {result.rating}</p>
                     <p key={result.released}>Released: {result.released}</p>
-                    <GameDetail title={result.name} image={result.background_image} />
+                    <GameItem title={result.name} image={result.background_image} />
                     <a href={href}>Games Details</a>
                 </div>
             );

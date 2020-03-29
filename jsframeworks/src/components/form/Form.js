@@ -1,14 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form"; 
 import * as yup from "yup"; 
-import DisplayError from "./DisplayError";
+
 
 const schema = yup.object().shape({
-    firstName: yup.string().required("First name is required, damnit"),
+    firstName: yup.string().required("First name is required"),
+    lastName: yup.string().required("Last name is required"),
     email: yup
         .string()
         .email("Please enter a valid email")
-        .required("Email is required")
+        .required("Email is required"),
+    message: yup.string().required("Some information is needed")
 });
 
 function Form() {
@@ -23,7 +25,7 @@ function Form() {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <input name="firstName" placeholder="First name" ref={register()} />
-            {errors.firstName && <DisplayError>{errors.firstName.message}</DisplayError>}
+            {errors.firstName && <p>{errors.firstName.message}</p>}
 
             <input name="lastName" placeholder="Last name" ref={register()} />
             {errors.lastName && <p>{errors.lastName.message}</p>}
@@ -31,8 +33,8 @@ function Form() {
             <input name="email" placeholder="Email" ref={register()} />
             {errors.email && <p>{errors.email.message}</p>}
 
-            <input name="Message" placeholder="Message" ref={register()} />
-            {errors.Message && <p>{errors.Message.message}</p>}
+            <input name="message" placeholder="Message" ref={register()} />
+            {errors.message && <p>{errors.message.message}</p>}
 
             <input type="submit" />
         </form>

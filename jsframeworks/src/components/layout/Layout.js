@@ -1,5 +1,4 @@
 import React from "react";
-
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
@@ -27,7 +26,7 @@ function Layout() {
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/form" component={ContactForm} />
+                    <Route path="/contact" component={ContactForm} />
                 </Switch>
             </Container>
         </Router>

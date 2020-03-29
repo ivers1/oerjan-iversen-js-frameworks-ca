@@ -1,17 +1,29 @@
 .card {
-    width: 200px;
+    display: block;
+    width: 400px;
     border: 2px solid grey;
+    
+    
 }
 
 .card img {
-    width: 100px;
+    width: 400px;
 }
 
 h1 {
-    font-size: 19px;
+    font-size: 29px;
 }
 
 p {
     font-size: 19px;
     font-style: italic;
+}
+
+.error {
+    color: red;
+    padding: 10px 0;
+}
+
+.container {
+    padding-top: 5px;
 }

@@ -11,7 +11,7 @@ function GameDetail() {
     const url = BASE_URL + id;
 
     useEffect(function() {
-        console.log("ddd");
+        console.log("information");
         fetch(url)
             .then(response => response.json())
             .then(json => {
@@ -28,7 +28,7 @@ function GameDetail() {
 
     return (
         <div>
-            <h1>{detail.name}</h1>
+            <p>{detail.name}</p>
             <img src={detail.background_image} alt={detail.background_image} />
         </div>
     );
