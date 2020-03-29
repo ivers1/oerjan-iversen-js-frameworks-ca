@@ -45,7 +45,7 @@ function List() {
         }
 
         return filteredResults.map(function(result) {
-            const href = "games/" + result.id;
+            const href = "game/" + result.id;
 
             return (
                 <div className="card">
@@ -53,7 +53,7 @@ function List() {
                     <img src={result.background_image} alt={result.name} />
                     <p key={result.rating}>Rating: {result.rating}</p>
                     <p key={result.released}>Released: {result.released}</p>
-                    <GameItem title={result.name} image={result.background_image} />
+                    
                     <a href={href}>Games Details</a>
                 </div>
             );

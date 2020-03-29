@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-
 import Home from "./components/home/Home";
 import ContactForm from "./components/form/ContactForm";
 import GameDetail from "./components/games/GameDetail";

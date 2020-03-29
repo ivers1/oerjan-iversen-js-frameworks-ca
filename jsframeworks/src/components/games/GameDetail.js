@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/api";
@@ -28,8 +31,10 @@ function GameDetail() {
 
     return (
         <div>
-            <p>{detail.name}</p>
+            <h1>{detail.name}</h1>
             <img src={detail.background_image} alt={detail.background_image} />
+            <p>{detail.description}</p>
+            
         </div>
     );
 }

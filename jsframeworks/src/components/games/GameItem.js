@@ -1,24 +1,30 @@
+
 import React from "react";
 import PropTypes from "prop-types";
-import Headline from "../layout/Headline";
+import { Link } from "react-router-dom";
 
 function GameItem(props) {
     return (
         <div>
-        <Headline content="Game Details" />
-            <p>
-                <b>title: {props.name}</b>
+             <p>
+                <b>{props.id}</b>
             </p>
             <p>
-                <b>image: {props.background_image}</b>
+                <b>{props.name}</b>
+            </p>
+            <p>
+                <b>{props.description}</b>
             </p>
         </div>
     );
 }
 
+
 GameItem.propTypes = {
-    title: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired
+	id: PropTypes.number.isRequired,
+	name: PropTypes.string.isRequired,
+	background_image: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
 };
 
 export default GameItem;
