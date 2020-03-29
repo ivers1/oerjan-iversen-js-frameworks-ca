@@ -18,6 +18,7 @@
 
 h1 {
     font-size: 29px;
+    font-weight: bold;
     text-align: center;
     color: aliceblue;
 }
@@ -25,6 +26,7 @@ h1 {
 p {
     font-size: 19px;
     font-style: italic;
+    font-weight: bold;
     text-align: center;
     color: aliceblue;
 }
@@ -46,6 +48,7 @@ input {
 
 .nav-link{
     padding: 5px;
+    font-weight: bold;
     text-decoration: none;
     color: aliceblue;
     :hover {
